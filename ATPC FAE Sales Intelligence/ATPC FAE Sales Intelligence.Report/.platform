@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ATPC FAE Sales Intelligence"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "77a18487-b3f0-4d2d-bca3-b37147a5152e"
+  }
+}
