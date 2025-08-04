@@ -427,10 +427,10 @@
           "z": 8000.00
         },
         {
-          "config": "{\"name\":\"ae52e9d943e401c8cfb1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":256.2189054726368,\"y\":94.52736318407959,\"z\":1000,\"width\":380.5970149253731,\"height\":39.80099502487562,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"NET EXTENDED SALES DETAILS2\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"DIN\",\"fontSize\":\"20pt\",\"color\":\"#005cb9\"}}]}]}}]}}}",
+          "config": "{\"name\":\"ae52e9d943e401c8cfb1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":256.2189054726368,\"y\":94.52736318407959,\"z\":1000,\"width\":358.2089552238806,\"height\":39.80099502487562,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"NET EXTENDED SALES DETAILS\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"DIN\",\"fontSize\":\"20pt\",\"color\":\"#005cb9\"}}]}]}}]}}}",
           "filters": "[]",
           "height": 39.80,
-          "width": 380.60,
+          "width": 358.21,
           "x": 256.22,
           "y": 94.53,
           "z": 1000.00
