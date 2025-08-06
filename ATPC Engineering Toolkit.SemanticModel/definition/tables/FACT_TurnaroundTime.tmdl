@@ -1,0 +1,257 @@
+table FACT_TurnaroundTime
+	lineageTag: df70d316-1508-410f-9ae3-8329947d2d05
+
+	column QuoteKey
+		dataType: string
+		lineageTag: 963a3bb5-8e48-4525-b07f-e4d3c7332399
+		summarizeBy: none
+		sourceColumn: QuoteKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuoteID
+		dataType: string
+		lineageTag: 61a767b2-1958-4457-a6dc-816a4e9c7af1
+		summarizeBy: none
+		sourceColumn: QuoteID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuoteNumber
+		dataType: string
+		lineageTag: fd207fdf-a59c-41dc-89d3-b76679440b38
+		summarizeBy: none
+		sourceColumn: QuoteNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuoteName
+		dataType: string
+		lineageTag: 95a17b18-9811-4729-b1c6-094b99306cdb
+		summarizeBy: none
+		sourceColumn: QuoteName
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequestedDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: cb32d6b4-6ee0-4ed8-b134-2629f62e27a1
+		summarizeBy: none
+		sourceColumn: RequestedDate
+
+		variation Variation
+			isDefault
+			relationship: b1421f87-3b22-4d13-9a1a-60fcd99e3551
+			defaultHierarchy: LocalDateTable_849c43e2-904b-48fb-9cad-955baa8fc776.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ApprovedDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 7a9dd464-fc0b-45f8-972f-88d34ae02c63
+		summarizeBy: none
+		sourceColumn: ApprovedDate
+
+		variation Variation
+			isDefault
+			relationship: c8299c63-ee29-4f44-a23c-8c3baeea4591
+			defaultHierarchy: LocalDateTable_06b172bb-7c4a-47fa-a182-4b3960ee32b1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column RejectedDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: b7a3cd5c-ad3b-4e4c-8a2a-57fbca9a6b03
+		summarizeBy: none
+		sourceColumn: RejectedDate
+
+		variation Variation
+			isDefault
+			relationship: 78e000f8-0094-4f71-b690-50cdc55a6646
+			defaultHierarchy: LocalDateTable_7836b7bc-a1fb-4caf-b39e-ddb919100565.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DecisionDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 346fd0bf-3708-402e-b717-a64fa81b0ef5
+		summarizeBy: none
+		sourceColumn: DecisionDate
+
+		variation Variation
+			isDefault
+			relationship: d93aa323-a2a1-4d2e-bc89-2a2d57e68346
+			defaultHierarchy: LocalDateTable_eb7dbe5b-b345-4532-adf9-b979ce8b8c47.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column IsApproved
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5465e51e-351a-434f-a2b6-a1ae56187be8
+		summarizeBy: none
+		sourceColumn: IsApproved
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsRejected
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6cc2f87c-cdad-4eb2-9138-778f604b7e45
+		summarizeBy: none
+		sourceColumn: IsRejected
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDecisioned
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4d35a638-78a6-4690-821c-2f1e719b9ad2
+		summarizeBy: none
+		sourceColumn: IsDecisioned
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuoteLineItems
+		dataType: int64
+		formatString: 0
+		lineageTag: d6d8f169-868d-4c82-a149-2885036cb8c3
+		summarizeBy: sum
+		sourceColumn: QuoteLineItems
+
+		annotation SummarizationSetBy = Automatic
+
+	column TurnaroundTime
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cbf4067-9ef7-4cbc-a14b-acbd9221d70c
+		summarizeBy: sum
+		sourceColumn: TurnaroundTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConfiguredProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: 3328f119-5486-4db0-940f-35bb07ee2531
+		summarizeBy: sum
+		sourceColumn: ConfiguredProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column TechnicalApprovals
+		dataType: int64
+		formatString: #,0
+		lineageTag: f63a1575-d353-4756-aa15-c15eee20fba1
+		summarizeBy: sum
+		sourceColumn: TechnicalApprovals
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountKey
+		dataType: string
+		lineageTag: 132ddb42-86d2-41c4-a4e6-7f90744048ac
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerKey
+		dataType: string
+		lineageTag: 18f77954-54b7-4a46-977e-8a4ecd51032a
+		summarizeBy: none
+		sourceColumn: OwnerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpportunityKey
+		dataType: string
+		lineageTag: 26389578-8212-4fcb-a9be-1416ce699820
+		summarizeBy: none
+		sourceColumn: OpportunityKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequestedDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 18075bf5-e110-4da2-8f5f-4d6c575fd06e
+		summarizeBy: none
+		sourceColumn: RequestedDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bin =
+			
+			Var _max = max(FACT_TurnaroundTime[TurnaroundTime])
+			Var _min = min(FACT_TurnaroundTime[TurnaroundTime])
+			var _Bucket = switch( true(),
+			    FACT_TurnaroundTime[TurnaroundTime]>=1  &&FACT_TurnaroundTime[TurnaroundTime]<= 5, "1-5",
+			    FACT_TurnaroundTime[TurnaroundTime]<= 10, "6-10",
+			    FACT_TurnaroundTime[TurnaroundTime]<= 15, "11-15",
+			    FACT_TurnaroundTime[TurnaroundTime]<= 20, "15-20",">20")
+			Return _Bucket
+		lineageTag: e8eca4e2-0dfb-43d9-bd9e-816e310e5fc3
+		summarizeBy: none
+		sortByColumn: BinOrder
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column BinOrder =
+			
+			Var _max = max(FACT_TurnaroundTime[TurnaroundTime])
+			Var _min = min(FACT_TurnaroundTime[TurnaroundTime])
+			var _Bucket = switch( true(),
+			    FACT_TurnaroundTime[TurnaroundTime]>=1 && FACT_TurnaroundTime[TurnaroundTime]<= 5, 1,
+			    FACT_TurnaroundTime[TurnaroundTime]<= 10, 2,
+			    FACT_TurnaroundTime[TurnaroundTime]<= 15, 3,
+			    FACT_TurnaroundTime[TurnaroundTime]<= 20, 4,5)
+			Return _Bucket
+		formatString: 0
+		lineageTag: 7ca528e2-e5a1-443d-b559-60258f0003b6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuoteURL = "https://tpcwire.lightning.force.com/lightning/r/Quote/" & FACT_TurnaroundTime[QuoteID] & "/view"
+		lineageTag: 34feb302-d34f-4857-9a68-1ab4719769e4
+		dataCategory: WebUrl
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_TurnaroundTime = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("atpc-dwh-db1.tpcwire.com", "ODIN-Production"),
+				    MIMIR_FACT_TurnaroundTimes = Source{[Schema="MIMIR",Item="FACT_TurnaroundTimes"]}[Data]
+				in
+				    MIMIR_FACT_TurnaroundTimes
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
