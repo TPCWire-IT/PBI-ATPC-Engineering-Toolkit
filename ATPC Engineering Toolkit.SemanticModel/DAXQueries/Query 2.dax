@@ -1,5 +1,0 @@
-evaluate
-Var _max = max(Parameter[Parameter])
-Var _min = min(Parameter[Parameter])
-Var _filtbl = FILTER(FACT_TurnaroundTime,FACT_TurnaroundTime[TurnaroundTime]>=_min && FACT_TurnaroundTime[TurnaroundTime]<=_max && FACT_TurnaroundTime[IsDecisioned])
-return _filtbl
