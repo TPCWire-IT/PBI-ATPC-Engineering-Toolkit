@@ -1,0 +1,37 @@
+table OrderStatusTable
+	lineageTag: 985b9ef8-3db1-457a-8707-4762235dbb37
+
+	column 'Order Status'
+		lineageTag: 59555c73-68ba-4582-891a-33c282fca96e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Order Status]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Selection Order'
+		formatString: 0
+		lineageTag: ab63c91f-917f-4821-9d41-8dbbb581d09a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Selection Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition OrderStatusTable = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Order Status", STRING,
+				    "Selection Order", INTEGER,
+				    {
+				        {"Entered", 1},
+				        {"Shipped", 2}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 94ad3a5821ae4ef1a8b4922fd4b1255e
+

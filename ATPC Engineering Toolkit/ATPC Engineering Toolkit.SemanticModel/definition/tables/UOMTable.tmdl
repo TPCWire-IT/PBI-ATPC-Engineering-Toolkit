@@ -1,0 +1,38 @@
+table UOMTable
+	lineageTag: 38ccbdc2-795e-4190-8204-750850f174b8
+
+	column UOM
+		lineageTag: d6049f12-bc95-445f-8f67-933b761d7142
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [UOM]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		formatString: 0
+		lineageTag: c6a2ee9f-ad34-4870-9b02-2b2cad7059c8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UOMTable = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "UOM", STRING,
+				    "Order", INTEGER,
+				    {
+				        {"Amount ($)", 1},
+				        {"Volume (ft)", 2},
+				        {"Volume (ea)", 3}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 9c1920f17fe247aaaa2624b03f7e3736
+

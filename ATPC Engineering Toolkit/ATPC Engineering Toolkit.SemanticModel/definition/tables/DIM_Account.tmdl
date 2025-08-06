@@ -1,0 +1,133 @@
+table DIM_Account
+	lineageTag: d8ccc418-6c2b-4ecf-bb0e-d428e3256e29
+
+	column AccountKey
+		dataType: string
+		lineageTag: c9db1efa-87eb-4549-922e-bf43870b9394
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a274e0d2-8816-49cd-ad0b-5c58b3f98833
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountID
+		dataType: string
+		lineageTag: f568dd86-aafa-4925-9dfe-10947dd2edf6
+		summarizeBy: none
+		sourceColumn: AccountID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountName
+		dataType: string
+		lineageTag: ead3b227-4afe-4481-9444-c3136bf341f9
+		summarizeBy: none
+		sourceColumn: AccountName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountType
+		dataType: string
+		lineageTag: 7c80091d-279b-4a35-9650-0fd60f44d9aa
+		summarizeBy: none
+		sourceColumn: AccountType
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordTypeID
+		dataType: string
+		lineageTag: 1085987d-0050-478f-9bb1-52ace0492b45
+		summarizeBy: none
+		sourceColumn: RecordTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentAccountID
+		dataType: string
+		lineageTag: 53f9af28-cf68-47a5-967c-af15aa34925f
+		summarizeBy: none
+		sourceColumn: ParentAccountID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerID
+		dataType: string
+		lineageTag: 3adec6fa-a448-408b-8b77-7feeb252a21d
+		summarizeBy: none
+		sourceColumn: OwnerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7cf98272-a347-4462-acd0-b43711c41114
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: a30c1968-11f1-430e-b07a-69982b9e8599
+			defaultHierarchy: LocalDateTable_aa7e2eb1-7af0-4473-8c65-49ed742fd822.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedByID
+		dataType: string
+		lineageTag: e4f8d5a9-a0fe-4c36-a311-b63fd585ea3b
+		summarizeBy: none
+		sourceColumn: CreatedByID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 63d10f00-4925-4460-a733-e9d8b6a065f6
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: cbae489c-01e2-48d7-85aa-79f8005cb28d
+			defaultHierarchy: LocalDateTable_d68286db-3022-4c71-8670-159b069f776c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedByID
+		dataType: string
+		lineageTag: 6ddebcce-09f0-455f-9c19-80a04d9970a8
+		summarizeBy: none
+		sourceColumn: LastModifiedByID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountOwnerKey
+		dataType: string
+		lineageTag: 44a6f81d-fb74-436e-9b34-913ab2586a8e
+		summarizeBy: none
+		sourceColumn: AccountOwnerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_Account = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("atpc-dwh-db1.tpcwire.com", "ODIN-Production"),
+				    MIMIR_DIM_Account1 = Source{[Schema="MIMIR",Item="DIM_Account"]}[Data]
+				in
+				    MIMIR_DIM_Account1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

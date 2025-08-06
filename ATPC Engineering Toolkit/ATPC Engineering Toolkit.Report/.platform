@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ATPC Engineering Toolkit"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5fd74981-ea99-4f72-b804-3b6c66747caf"
+  }
+}
